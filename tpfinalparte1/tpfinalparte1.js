@@ -1,3 +1,5 @@
+//https://www.youtube.com/watch?v=7gNTMvduExI&feature=youtu.be
+//https://youtu.be/-otK1Jd0tOw
 let pantallas = 0;
 let textos = [];
 let imagenes = [];
