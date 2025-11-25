@@ -23,19 +23,15 @@ class Jugador {
     this.perdiste = true;
   }
 
-  incrementarPuntaje() {
-    this.puntaje = this.puntaje +5;
-  }
-
   salto() {
     if (this.perdiste == false) {
-      if (this.saltando) {
+      if (this.saltando == true) {
         this.posY -= 6;
         if (this.posY <= this.alturamaxima) {
           this.saltando = false;
           this.cayendo = true;
         }
-      } else if (this.cayendo) {
+      } else if (this.cayendo == true) {
         this.posY += 4;
         if (this.posY >= this.alturaMinima) {
           this.posY = this.alturaMinima;

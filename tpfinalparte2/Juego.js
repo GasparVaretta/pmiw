@@ -6,16 +6,12 @@ class Juego {
     this.frameRata = 0;
     this.frameLobo = 0;
     this.parallax =Parallax;
-    this.backGround =Background
+    this.backGround =Background;
     this.jugador = new Jugador(Hud, spritesReyCorriendo,spriteReyCayendo, spriteReySaltando);
     this.obstaculos = new Obstaculo(this, this.jugador, spritesRata, spritesLobo, spritesPiedras);
     this.moneda = new Moneda(this.jugador, spritesMonedas, sonidoMoneda);
     this.fondoParallax = new FondoParallax(Parallax, Background, this.jugador);
     this.hud = new Hud(this.jugador, perdiste);
-  }
-
-  dibujarFondo() {
-    this.fondoParallax.dibujarImagenes();
   }
 
   iniciar() {
@@ -37,7 +33,7 @@ class Juego {
     if (this.frameLobo > 3) {
       this.frameLobo = 0;
     }
-    this.dibujarFondo();
+    this.fondoParallax.dibujarImagenes();
     this.jugador.dibujar(this.frameCorrerYMoneda, this.frameSaltoYCaida);
     this.obstaculos.dibujar(this.frameRata, this.frameLobo);
     this.moneda.dibujar(this.frameCorrerYMoneda)
