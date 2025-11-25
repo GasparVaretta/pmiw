@@ -1,5 +1,5 @@
 class Jugador {
-  constructor(Hud, Moneda,spritesReyCorriendo,frameCorrerYMoneda, frameSaltoYCaida, spriteReyCayendo, spriteReySaltando) {
+  constructor(hud, spritesReyCorriendo, spriteReyCayendo, spriteReySaltando){
     this.puntaje = 0;
     this.posX = width/2;
     this.posY = 290
@@ -12,13 +12,12 @@ class Jugador {
     this.perdiste =false;
   }
 
-  dibujar() {
-    this.spriteRey.dibujarSprite(this.posX, this.posY,spritesReyCorriendo,frameCorrerYMoneda, frameSaltoYCaida,this.saltando,this.cayendo, spriteReyCayendo, spriteReySaltando);
+  dibujar(frameCorrerYMoneda, frameSaltoYCaida) {
+    this.spriteRey.dibujarSprite(this.posX, this.posY, spritesReyCorriendo, spriteReyCayendo, spriteReySaltando, frameCorrerYMoneda, frameSaltoYCaida,this.saltando, this.cayendo);
     this.salto();
+    print("puntaje"+ this.puntaje);
   }
-
  
-
   perder() {
     this.hud.perder();
     this.perdiste = true;

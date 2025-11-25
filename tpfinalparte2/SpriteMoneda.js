@@ -4,7 +4,7 @@ class SpriteMoneda {
     this.posY = y;
   }
   
-  dibujarSprite(x,y, spritesMonedas){
+  dibujarSprite(x,y, spritesMonedas, frameCorrerYMoneda){
     image(spritesMonedas[frameCorrerYMoneda], x, y, 30, 30);
   }
 }

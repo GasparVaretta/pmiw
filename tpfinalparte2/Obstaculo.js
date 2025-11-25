@@ -1,5 +1,5 @@
 class Obstaculo{
-  constructor(Juego, Jugador, frameRata,frameLobo, spritesRata, spritesLobo, spritesPiedras){
+  constructor(Juego, Jugador, spritesRata, spritesLobo, spritesPiedras){
     this.juego = Juego;
     this.posX = 1000;
     this.posY = 290;
@@ -10,8 +10,8 @@ class Obstaculo{
     this.spriteAleatoreo = 1;
   }
   
-  dibujar() {
-    this.spriteObstaculo.dibujarSprite(this.posX, this.posY, frameRata,frameLobo, spritesRata, spritesLobo, spritesPiedras, this.spriteAleatoreo);
+  dibujar(frameRata, frameLobo) {
+    this.spriteObstaculo.dibujarSprite(this.posX, this.posY, frameRata, frameLobo, spritesRata, spritesLobo, spritesPiedras, this.spriteAleatoreo);
     this.movimientoX();
     this.colisionConJugador(this.spriteAleatoreo);
   }
